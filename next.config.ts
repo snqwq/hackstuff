@@ -5,7 +5,8 @@ const nextConfig: NextConfig = {
   images: {
     domains: [
       'shop.flipperzero.one',
-      'www.rtl-sdr.com'
+      'www.rtl-sdr.com',
+      'heltec.org'
     ],
   },
   reactStrictMode: true,
