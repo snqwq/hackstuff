@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   images: {
     domains: [
       'shop.flipperzero.one',
+      'www.rtl-sdr.com'
     ],
   },
   reactStrictMode: true,

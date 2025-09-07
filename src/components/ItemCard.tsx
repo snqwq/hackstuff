@@ -45,7 +45,7 @@ export default function ItemCard({ item }: ItemCardProps): JSX.Element {
           <Image
             src={item.image_url}
             alt={item.name || "Product image"}
-            className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-auto py-2 px-2 object-cover group-hover:scale-105 transition-transform duration-300"
             width={400}
             height={100}
           />
