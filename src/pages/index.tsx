@@ -38,7 +38,7 @@ export default function Home(): JSX.Element {
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-screen">
-        <div className="text-xl">Loading cool stuff...</div>
+        <div className="text-xl">She load on my ing till i...</div>
       </div>
     );
   }
@@ -63,10 +63,10 @@ export default function Home(): JSX.Element {
     <div className="container mx-auto p-8">
       <header className="mb-12 text-center">
         <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-          Cool Stuff I Found
+          Cool Stuff (insert actually good title here)
         </h1>
         <p className="text-xl text-gray-600">
-          Discovering the internet&apos;s most interesting products
+          guhhhh!?!??!
         </p>
       </header>
 
