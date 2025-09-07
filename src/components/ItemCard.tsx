@@ -8,14 +8,19 @@ interface ItemCardProps {
 
 function getTagColor(tag: string): string {
   const specialTags: { [key: string]: string } = {
-    // Special/branded tags
-    'hackclub': 'bg-red-500 text-white border-red-600 shadow-lg shadow-red-500/25',
+    // Special tags
+    'hacking': 'bg-black text-green-400 border-green-600',
+
+    // Status tags
     'featured': 'bg-gradient-to-r from-yellow-400 to-orange-500 text-white border-orange-600',
     'exclusive': 'bg-gradient-to-r from-purple-500 to-pink-500 text-white border-purple-600',
     'limited': 'bg-black text-white border-gray-800',
     'new': 'bg-green-500 text-white border-green-600',
     'hot': 'bg-red-500 text-white border-red-600 animate-pulse',
     'sale': 'bg-orange-500 text-white border-orange-600',
+    
+    // Branded tags
+    'hackclub': 'bg-red-500 text-white border-red-600 shadow-lg shadow-red-500/25',
   }
   
   // Check if it's a special tag first
