@@ -11,7 +11,7 @@ export default function NotFound(): JSX.Element {
       <p className="text-xl text-gray-600 my-16">
         Sorry, the page you are looking for does not exist.
       </p>
-      <Link href="/" className="text-purple-500 hover:underline animate-bounce">
+      <Link href="/" className="text-purple-500 hover:underline animate-pulse">
         Send me back!
       </Link>
     </div>
