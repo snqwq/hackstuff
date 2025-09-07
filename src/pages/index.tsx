@@ -1,11 +1,27 @@
 "use client";
 
-import { useState, useEffect, JSX } from "react";
+import { useState, useEffect, useCallback, useMemo, JSX } from "react";
 import { supabase } from "@/lib/supabase";
 import { Item } from "@/lib/types";
 import ItemCard from "@/components/ItemCard";
 
 export default function Home(): JSX.Element {
+  const texts = useMemo(
+    () => [
+      "She load on my ing till i... well... i shant say...",
+      "Looooooooooooading...",
+      "🐟",
+      "loading...",
+      "Loading... Please wait.",
+      "loading... Dont wait",
+      "not loading... goodluck",
+      "i wonder if anyone actually reads these",
+    ],
+    []
+  );
+  const getRandomLoadingText = useCallback((): string => {
+    return texts[Math.floor(Math.random() * texts.length)];
+  }, [texts]);
   const [items, setItems] = useState<Item[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -35,10 +51,18 @@ export default function Home(): JSX.Element {
     }
   }
 
+  const [loadingText, setLoadingText] = useState("Loading...");
+
+  useEffect(() => {
+    if (loading) {
+      setLoadingText(getRandomLoadingText());
+    }
+  }, [loading, getRandomLoadingText]);
+
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-screen">
-        <div className="text-xl">She load on my ing till i...</div>
+        <div className="text-xl">{loadingText}</div>
       </div>
     );
   }
@@ -65,9 +89,7 @@ export default function Home(): JSX.Element {
         <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
           Cool Stuff (insert actually good title here)
         </h1>
-        <p className="text-xl text-gray-600">
-          guhhhh!?!??!
-        </p>
+        <p className="text-xl text-gray-600">guhhhh!?!??!</p>
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -80,7 +102,7 @@ export default function Home(): JSX.Element {
         <div className="text-center py-12">
           <p className="text-xl text-gray-500">No items found.</p>
           <p className="text-gray-400 mt-2">
-            Add some cool stuff to your database!
+            Probably not a good sign...
           </p>
         </div>
       )}
