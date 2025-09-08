@@ -10,9 +10,10 @@ function getTagColor(tag: string): string {
   const specialTags: { [key: string]: string } = {
     // Special tags
     'hacking': 'bg-black text-green-400 border-green-600',
+    'radio': 'bg-white text-black border-red-400 border-2 border-dashed shadow-md shadow-red-400/10',
 
     // Status tags
-    'featured': 'bg-gradient-to-r from-yellow-400 to-orange-500 text-white border-orange-600',
+    'featured': 'bg-gradient-to-r from-yellow-400 to-orange-500 text-white border-orange-600 animate-bounce',
     'exclusive': 'bg-gradient-to-r from-purple-500 to-pink-500 text-white border-purple-600',
     'limited': 'bg-black text-white border-gray-800',
     'new': 'bg-green-500 text-white border-green-600',
