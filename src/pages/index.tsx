@@ -92,7 +92,7 @@ export default function Home(): JSX.Element {
         <p className="text-xl text-gray-600">guhhhh!?!??!</p>
       </header>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {items.map((item) => (
           <ItemCard key={item.id} item={item} />
         ))}
