@@ -86,13 +86,13 @@ export default function Home(): JSX.Element {
   return (
     <div className="container mx-auto p-8">
       <header className="mb-12 text-center">
-        <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-          Cool Stuff (insert actually good title here)
+        <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-[montserrat] italic">
+          HackStuff.cool &lt;- no domain yet
         </h1>
         <p className="text-xl text-gray-600">guhhhh!?!??!</p>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {items.map((item) => (
           <ItemCard key={item.id} item={item} />
         ))}
@@ -101,9 +101,7 @@ export default function Home(): JSX.Element {
       {items.length === 0 && (
         <div className="text-center py-12">
           <p className="text-xl text-gray-500">No items found.</p>
-          <p className="text-gray-400 mt-2">
-            Probably not a good sign...
-          </p>
+          <p className="text-gray-400 mt-2">Probably not a good sign...</p>
         </div>
       )}
     </div>
