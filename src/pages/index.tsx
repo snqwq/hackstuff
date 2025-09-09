@@ -51,7 +51,7 @@ export default function Home(): JSX.Element {
     }
   }
 
-  const [loadingText, setLoadingText] = useState("Loading...");
+  const [loadingText, setLoadingText] = useState("loading...");
 
   useEffect(() => {
     if (loading) {
@@ -62,6 +62,7 @@ export default function Home(): JSX.Element {
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-screen">
+        <title>{loadingText}</title>
         <div className="text-xl">{loadingText}</div>
       </div>
     );
@@ -70,6 +71,7 @@ export default function Home(): JSX.Element {
   if (error) {
     return (
       <div className="container mx-auto p-8">
+        <title>Error</title>
         <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
           {error}
         </div>
@@ -85,6 +87,7 @@ export default function Home(): JSX.Element {
 
   return (
     <div className="container mx-auto p-8">
+      <title>HackStuff</title>
       <header className="mb-12 text-center">
         <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-[montserrat] italic">
           HackStuff.cool &lt;- no domain yet
