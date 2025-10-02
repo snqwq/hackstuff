@@ -36,17 +36,15 @@ function getTagColor(tag: string): string {
 export default function ItemCard({ item }: ItemCardProps): JSX.Element {
   return (
     <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
-      {item.image_url && (
         <div className="relative overflow-hidden">
           <Image
-            src={item.image_url}
+            src={item.image_url ?? "/favicon.ico"}
             alt={item.name || "Product image"}
             className="w-full h-auto py-2 px-2 object-cover group-hover:scale-105 transition-transform duration-300"
             width={400}
             height={100}
           />
         </div>
-      )}
       <div className="p-6">
         <h2 className="text-xl font-bold mb-2 text-gray-900 line-clamp-2">
           {item.name}
