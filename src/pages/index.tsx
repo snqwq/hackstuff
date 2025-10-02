@@ -88,14 +88,14 @@ export default function Home(): JSX.Element {
   return (
     <div className="container mx-auto p-8">
       <title>HackStuff</title>
-      <header className="mb-12 text-center">
+      <header className="mb-12 text-left">
         <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-[montserrat] italic">
           HackStuff.cool &lt;- no domain yet
         </h1>
         <p className="text-xl text-gray-600">guhhhh!?!??!</p>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {items.map((item) => (
           <ItemCard key={item.id} item={item} />
         ))}
